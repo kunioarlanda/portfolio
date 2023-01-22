@@ -12,7 +12,7 @@
 05) CAVANI HOME
 06) CAVANI ABOUT
 07) CAVANI PORTFOLIO
-08) CAVANI NEWS
+08) CAVANI SERVICE
 09) CAVANI CONTACT
 10) CAVANI FOOTER
 11) CAVANI MAGIC CURSOR
@@ -40,7 +40,7 @@ body{
 	letter-spacing: 0px;
 	word-wrap: break-word;
 	font-weight: 400;
-	background-color: #f6fbff;
+	background-color: #fffcfa;
 	color: #7d7789;
 }
 svg{
@@ -557,7 +557,7 @@ h6 { font-size: 16px; }
 	bottom: 0px;
 	right: 0px;
 	width: 100px;
-	background-color: #f6fbff;
+	background-color: #fffcfa;
 }
 
 /*---------------------------------------------------*/
@@ -969,7 +969,7 @@ h6 { font-size: 16px; }
     position: absolute;
     height: 18px;
     width: 18px;
-    background: #f6fbff;
+    background: #fffcfa;
     border-radius: 100%;
     border: solid 1px #CCC;
     left: -9px;
@@ -1128,7 +1128,7 @@ h6 { font-size: 16px; }
 	height: 0px;
     width: 0px;
     border: solid transparent;
-    border-top-color: #f6fbff;
+    border-top-color: #fffcfa;
     border-width: 14px 13px 0px 0px;
     margin-left: 2px;
 }
@@ -1571,183 +1571,141 @@ h6 { font-size: 16px; }
 }
 
 /*---------------------------------------------------*/
-/*	08) CAVANI NEWS
+/*	08) CAVANI SERVICE
 /*---------------------------------------------------*/
 
-.cavani_tm_news{
-	width: 100%;
-	height: auto;
-	clear: both;
-	float: left;
-	margin-bottom: 70px;
+.cavani_tm_service
+{
+	width:100%;
+	height:auto;
+	clear:both;
+	float:left;
+	margin-bottom:70px
 }
-.cavani_tm_news .news_list{
-	width: 100%;
-	height: auto;
-	clear: both;
-	float: left;
-	margin-top: 62px;
+.cavani_tm_service .service_list
+{
+	width:100%;
+	height:auto;
+	clear:both;
+	float:left;
+	margin-top:60px
 }
-.cavani_tm_news .news_list ul{
-	margin: 0px 0px 0px -30px;
-	list-style-type: none;
+.cavani_tm_service .service_list ul
+{
+	margin:0 0 0 -50px;
+	list-style-type:none;
+	display:flex;
+	flex-wrap:wrap
 }
-.cavani_tm_news .news_list ul li{
-	margin: 0px 0px 30px 0px;
-	width: 33.3333%;
-	float: left;
-	padding-left: 30px;
+.cavani_tm_service .service_list ul li
+{
+	margin:0 0 50px;
+	width:50%;
+	padding-left:50px
 }
-.cavani_tm_news .news_list ul li .list_inner{
-	position: relative;
-	width: 100%;
-	height: auto;
-	clear: both;
-	float: left;
-	border: 1px solid rgba(0,0,0,.07)
+.cavani_tm_service .service_list ul li .list_inner
+{
+	width:100%;
+	height:100%;
+	clear:both;
+	float:left;
+	position:relative;
+	border:1px solid #b9b8c3;
+	padding:70px 40px 63px;
+	text-align:center;
+	transition:all .3s ease
 }
-.cavani_tm_news .news_list ul li .image{
-	position: relative;
-	overflow: hidden;
+.cavani_tm_service .service_list ul li .list_inner:hover
+{
+	background-color:#333
 }
-.cavani_tm_news .news_list ul li .image img{
-	position: relative;
-	min-width: 100%;
-	opacity: 0;
+.cavani_tm_service .service_list ul li .svg
+{
+	width:60px;
+	height:60px;
+	color:#333;
+	margin-bottom:27px;
+	transition:all .3s ease
 }
-.cavani_tm_news .news_list ul li .image .main{
-	position: absolute;
-	top: 0px;
-	bottom: 0px;
-	left: 0px;
-	right: 0px;
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center;
-	transform: scale(1) translateZ(0);
-	
-	-webkit-transition: all .3s ease;
-	   -moz-transition: all .3s ease;
-	    -ms-transition: all .3s ease;
-	     -o-transition: all .3s ease;
-	        transition: all .3s ease;
+.cavani_tm_service .service_list ul li .list_inner:hover .svg
+{
+	color:#fff
 }
-.cavani_tm_news .news_list ul li .list_inner .image:hover .main{
-	transform: scale(1.1) translateZ(0);
+.cavani_tm_service .service_list ul li .title
+{
+	font-weight:500;
+	font-size:24px;
+	color:#333;
+	margin-bottom:15px;
+	transition:all .3s ease
 }
-.cavani_tm_news .news_list ul li .details{
-	width: 100%;
-	height: auto;
-	clear: both;
-	float: left;
-	padding: 19px 30px 3px 30px;
+.cavani_tm_service .service_list ul li .list_inner:hover .title
+{
+	color:#fff
 }
-.cavani_tm_news .news_list ul li .metabox{
-	width: 100%;
-	float: left;
-	margin-bottom: 20px;
+.cavani_tm_service .service_list ul li .list_inner .text
+{
+	transition:all .3s ease
 }
-.cavani_tm_news .news_list ul li .metabox .info{
-	width: 100%;
-	float: left;
-	margin-bottom: 5px;
+.cavani_tm_service .service_list ul li .list_inner:hover .text
+{
+	color:#aaa
 }
-.cavani_tm_news .news_list ul li .metabox .info span{
-	position: relative;
-	padding-left: 25px;
-	font-size: 14px;
+.cavani_tm_service .popup_service_image,.cavani_tm_service .service_hidden_details
+{
+	opacity:0;
+	visibility:hidden;
+	display:none;
+	position:absolute;
+	z-index:-111
 }
-.cavani_tm_news .news_list ul li .metabox .info span:first-child{
-	padding-left: 0px;
+.cavani_tm_modalbox .service_popup_informations
+{
+	width:100%;
+	height:auto;
+	clear:both;
+	float:left
 }
-.cavani_tm_news .news_list ul li .metabox .info span:before{
-	position: relative;
-	content: "|";
-	color: #7d7789;
-	right: 14px;
-	font-size: 12px;
-	top: -2px;
+.cavani_tm_modalbox .service_popup_informations .image
+{
+	width:100%;
+	float:left;
+	position:relative;
+	margin-bottom:37px
 }
-.cavani_tm_news .news_list ul li .metabox .info span:first-child:before{
-	display: none;
+.cavani_tm_modalbox .service_popup_informations .image img
+{
+	position:relative;
+	min-width:100%;
+	opacity:0
 }
-.cavani_tm_news .news_list ul li .metabox a{
-	text-decoration: none;
-	color: #7d7789;
-	
-	-webkit-transition: all .3s ease;
-	   -moz-transition: all .3s ease;
-	    -ms-transition: all .3s ease;
-	     -o-transition: all .3s ease;
-	        transition: all .3s ease;
+.cavani_tm_modalbox .service_popup_informations .image .main
+{
+	position:absolute;
+	top:0;
+	bottom:0;
+	left:0;
+	right:0;
+	background-repeat:no-repeat;
+	background-size:cover;
+	background-position:50%
 }
-.cavani_tm_news .news_list ul li .metabox a:hover{
-	color: #333;
+.cavani_tm_modalbox .service_popup_informations .main_title h3
+{
+	font-size:22px
 }
-.cavani_tm_news .news_list ul li .metabox .title h3{
-	font-size: 16px;
-	font-weight: 600;
-	line-height: 1.4;
+.cavani_tm_modalbox .service_popup_informations .descriptions
+{
+	width:100%;
+	float:left
 }
-.cavani_tm_news .news_list ul li .metabox .title a{
-	text-decoration: none;
-	display: inline-block;
-	color: #333;
+.cavani_tm_modalbox .service_popup_informations .descriptions p
+{
+	margin-bottom:15px
 }
-.cavani_tm_news .news_hidden_details{
-	display: none;
-	opacity: 0;
-	visibility: hidden;
-	position: absolute;
-	z-index: -11;
-}
-.cavani_tm_modalbox .news_popup_informations{
-	width: 100%;
-	height: auto;
-	clear: both;
-	float: left;
-}
-.cavani_tm_modalbox .news_popup_informations .image{
-	position: relative;
-	margin-bottom: 37px;
-}
-.cavani_tm_modalbox .news_popup_informations .image img{
-	position: relative;
-	opacity: 0;
-	min-width: 100%;
-}
-.cavani_tm_modalbox .news_popup_informations .image .main{
-	position: absolute;
-	top: 0px;
-	bottom: 0px;
-	left: 0px;
-	right: 0px;
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center;
-}
-.cavani_tm_modalbox .news_popup_informations .details{
-	width: 100%;
-	float: left;
-	margin-bottom: 20px;
-}
-.cavani_tm_modalbox .news_popup_informations .details span{
-	display: inline-block;
-	margin-bottom: 5px;
-}
-.cavani_tm_modalbox .news_popup_informations .details h3{
-	font-weight: 700;
-	font-size: 22px;
-}
-.cavani_tm_modalbox .news_popup_informations .text{
-	width: 100%;
-	float: left;
-}
-.cavani_tm_modalbox .news_popup_informations .text p{
-	margin-bottom: 15px;
-}
-.cavani_tm_modalbox .news_popup_informations .text p:last-child{
-	margin-bottom: 0px;
+.cavani_tm_modalbox .service_popup_informations .descriptions p:last-child
+{
+	margin-bottom:0
 }
 
 /*---------------------------------------------------*/
@@ -2017,7 +1975,7 @@ h6 { font-size: 16px; }
  	height: 100%;
 	top: 0;
  	left: 0;
-	background-image: url("..//img/about/2.jpg");
+	background-image: url("..//img/about/arlanda2.jpg");
 	background-size: cover;
 	-webkit-background-size: cover;
 	background-position: center;
