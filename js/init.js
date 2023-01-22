@@ -448,7 +448,7 @@ function cavani_tm_contact_form(){
 		}
 		else{
 			// Returns successful data submission message when the entered information is stored in database.
-			jQuery.post("https://formsubmit.co/ajax/83a77d2f2a64fc4e024d5433096ccd48",{ name: name, email: email, message:message, subject: subject}, function(data) {
+			jQuery.post("https://formsubmit.co/83a77d2f2a64fc4e024d5433096ccd48",{ name: name, email: email, message:message, subject: subject}, function(data) {
 				
 				jQuery(".contact_form .returnmessage").append(data);//Append returned message to message paragraph
 				
