@@ -675,7 +675,10 @@
 														<input id="name" type="text" placeholder="Name *Required" autocomplete="off">
 													</li>
 													<li>
-														<input id="email" type="text" placeholder="Email *Required" autocomplete="off">
+														<input id="email" type="email" name="email" placeholder="Email *Required" autocomplete="off">
+													</li>
+													<li>
+														<input id="subject" type="text" placeholder="Subject *Required" autocomplete="off">
 													</li>
 												</ul>
 											</div>
@@ -688,6 +691,7 @@
 
 											<!-- If you want change mail address to yours, just open "modal" folder >> contact.php and go to line 4 and change detail to yours.  -->
 
+											<input type="hidden" name="_template" value="table">
 										</form>
 									</div>
 								
