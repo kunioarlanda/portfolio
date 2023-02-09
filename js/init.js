@@ -367,6 +367,7 @@ function cavani_tm_popup(){
 	  type : 'image',
 	   gallery: {
 		   enabled: true, 
+		   mainClass: 'mfp-fade'
 	   },
 	});
 }
@@ -380,32 +381,39 @@ function cavani_tm_portfolio(){
 	"use strict";
 	
 	if(jQuery().isotope) {
-
-		// Needed variables
-		var filter		 = jQuery('.cavani_tm_portfolio .portfolio_filter ul');
-
-		if(filter.length){
-			// Isotope Filter 
-			filter.find('a').on('click', function(){
-				var element		= jQuery(this);
-				var selector 	= element.attr('data-filter');
-				var list		= element.closest('.cavani_tm_portfolio').find('.portfolio_list').children('ul');
-				list.isotope({ 
-					filter				: selector,
-					animationOptions	: {
-						duration			: 750,
-						easing				: 'linear',
-						queue				: false
-					}
-				});
-				
-				filter.find('a').removeClass('current');
-				element.addClass('current');
-				return false;
-			});	
+	
+	  // Needed variables
+	  var filter		 = jQuery('.cavani_tm_portfolio .portfolio_filter ul');
+	
+	  if(filter.length){
+		// Isotope Filter 
+		filter.find('a').on('click', function(){
+		  var element		= jQuery(this);
+		  var selector 	= element.attr('data-filter');
+		  var list		= element.closest('.cavani_tm_portfolio').find('.portfolio_list').children('ul');
+		  list.isotope({ 
+			filter				: selector,
+			animationOptions	: {
+			  duration			: 750,
+			  easing				: 'linear',
+			  queue				: false
+			}
+		  });
+		  
+		  filter.find('a').removeClass('current');
+		  element.addClass('current');
+		  filter.find('li').removeClass('active');
+		  element.closest('li').addClass('active');
+		  return false;
+		});  
+	
+		var currentElement = filter.find('a.current');
+		if (currentElement.length) {
+		  currentElement.trigger('click');
 		}
+	  }
 	}
-}
+  }
 
 // -----------------------------------------------------
 // ---------------   DATA IMAGES    --------------------

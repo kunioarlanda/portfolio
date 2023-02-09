@@ -275,8 +275,7 @@ h6 { font-size: 16px; }
 	padding: 0px 70px;
 }
 .cavani_tm_header .logo img{
-	max-width: 110px;
-	max-height: 65px;
+	max-height: 19px;
 }
 .cavani_tm_header .menu{
 	position: relative;
@@ -354,8 +353,7 @@ h6 { font-size: 16px; }
 	padding: 0px 20px;
 }
 .cavani_tm_topbar .logo img{
-	max-width: 100px;
-	max-height: 40px;
+	max-height: 18px;
 }
 .cavani_tm_topbar .hamburger{
 	padding: 0px;
@@ -1105,7 +1103,7 @@ h6 { font-size: 16px; }
 	clear: both;
 	float: left;
 	position: relative;
-	border: 2px solid #E5EDF4;
+	border: 2px solid #b9b8c3;
 	padding: 40px;
 	margin-bottom: 30px;
 }
@@ -1117,7 +1115,7 @@ h6 { font-size: 16px; }
 	top: 100%;
     left: 50px;
     border: solid transparent;
-    border-top-color: #E5EDF4;
+    border-top-color: #b9b8c3;
     border-width: 18px 18px 0px 0px;
 }
 .cavani_tm_about .testimonials .list ul li .text:after{
@@ -1212,7 +1210,7 @@ h6 { font-size: 16px; }
 	list-style-type: none;
 }
 .cavani_tm_portfolio .portfolio_filter ul li{
-	margin: 0px 40px 0px 0px;
+	margin: 0px 40px 7.5px 0px;
 	display: inline-block;
 }
 .cavani_tm_portfolio .portfolio_filter ul li:last-child{
@@ -1230,6 +1228,11 @@ h6 { font-size: 16px; }
 	     -o-transition: all .3s ease;
 	        transition: all .3s ease;
 }
+.cavani_tm_portfolio .portfolio_filter ul li.active a {
+	color: #fff;
+	background-color: #333;
+	padding: 7.5px 20px;
+}  
 .cavani_tm_portfolio .portfolio_list{
 	width: 100%;
 	height: auto;
@@ -1242,7 +1245,7 @@ h6 { font-size: 16px; }
 }
 .cavani_tm_portfolio .portfolio_list ul li{
 	margin: 0px 0px 30px 0px;
-	width: 33.3333%;
+	width: 50%;
 	float: left;
 	padding-left: 30px;
 }
@@ -1542,7 +1545,7 @@ h6 { font-size: 16px; }
 	width: 50%;
 	padding-left: 30px;
 }
-.cavani_tm_modalbox .additional_images ul li:nth-child(3n-2){
+#cavani_tm_modalbox .additional_images ul li:nth-child(3n-2){
 	width: 100%;
 }
 .cavani_tm_modalbox .additional_images ul li .list_inner{
@@ -2012,7 +2015,7 @@ h6 { font-size: 16px; }
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
-	background-image: url("..//img/about/3.jpg");
+	background-image: url("..//img/about/arlanda2.jpg");
 }
 
 /*---------------------------------------------------*/
@@ -2021,7 +2024,7 @@ h6 { font-size: 16px; }
 
 @media (max-width: 1400px) {
 	body{font-size: 15px;}
-	.cavani_tm_header .logo img{max-width: 95px;}
+	.cavani_tm_header .logo img{max-height: 17px;}
 	.cavani_tm_mainpart .author_image{width: 35%;}
 	.cavani_tm_mainpart .main_content{width: 65%;}
 	.cavani_tm_section .section_inner:before{width: 50px;}
@@ -2120,4 +2123,15 @@ h6 { font-size: 16px; }
 	.cavani_tm_modalbox .box_inner{width: 300px;top: 100px;bottom: 40px;}
 	.cavani_tm_modalbox .close{margin-left: -25px;top: -35px;}
 	.cavani_tm_modalbox .close .svg{width: 25px;height: 25px;}
+	.cavani_tm_service .service_list ul {
+		margin:0
+	   }
+	.cavani_tm_service .service_list ul li {
+		width:100%;
+		padding-left:0;
+		margin-bottom:20px
+	   }
+	   .cavani_tm_service .service_list ul li .title {
+		font-size:20px
+	   }
 }
